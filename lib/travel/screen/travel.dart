@@ -43,6 +43,15 @@ class _TravelState extends State<Travel> {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
+                          _travelDetailsModel![index].groupPhoto.toString() ==
+                                  ""
+                              ? const SizedBox()
+                              : Image.network(
+                                  _travelDetailsModel![index]
+                                      .groupPhoto
+                                      .toString(),
+                                  width: 20,
+                                ),
                           Text(_travelDetailsModel![index].id.toString()),
                           Text(_travelDetailsModel![index].travel.name),
                           Text(_travelDetailsModel![index].travel.description),

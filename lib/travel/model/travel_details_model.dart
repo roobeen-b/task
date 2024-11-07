@@ -18,7 +18,7 @@ class TravelDetailsModel {
       TravelDetailsModel(
           id: json["id"],
           travel: TravelModel.fromJson(json["travel"]),
-          groupPhoto: json["group_photo"],
+          groupPhoto: json["group_photo"] ?? "",
           travelAgenda: json["travel_agenda"]);
 }
 
